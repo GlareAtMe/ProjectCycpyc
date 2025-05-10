@@ -1,0 +1,7 @@
+organization=stiven
+projectKey=GlareAtMe_ProjectCycpyc
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.63177
+dashboardUrl=https://sonarcloud.io/dashboard?id=GlareAtMe_ProjectCycpyc
+ceTaskId=AZa8RvJ99e7QDePLWNuV
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZa8RvJ99e7QDePLWNuV
