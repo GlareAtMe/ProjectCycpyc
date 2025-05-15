@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Constans;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class TestGameManager : MonoBehaviour
 {
@@ -19,11 +21,16 @@ public class TestGameManager : MonoBehaviour
 
     public void OnLoadPokerSceneButtonPressed()
     {
-        GameManager.Instance.LoadScene("PokerScene", GameState.PokerPhase);
+        GameManager.Instance.LoadScene(SceneConstans.POKER_SCENE, GameState.PokerPhase);
     }
 
     public void OnLoadArenaSceneButtonPressed()
     {
-        GameManager.Instance.LoadScene("ArenaScene", GameState.ArenaPhase);
+        GameManager.Instance.LoadScene(SceneConstans.ARENA_SCENE, GameState.ArenaPhase);
+    }
+
+    public void OnLoadMainMenuSceneButtonPressed()
+    {
+        GameManager.Instance.LoadScene(SceneConstans.MAIN_MENU_SCENE, GameState.ArenaPhase);
     }
 }
