@@ -21,6 +21,9 @@ public class CardDataSO : ScriptableObject
     [Tooltip("Visual style for the figure displayed on the card.")]
     public CardFigureSpriteSO cardFigureSprite;
 
+    [Tooltip("Bonus modifiers for base cards.")]
+    public float bonusValue;
+
     [Tooltip("Helper data used for combination and synergy calculations.")]
     public CombinationHelperSO combinationHelper;
 
@@ -29,4 +32,5 @@ public class CardDataSO : ScriptableObject
 
     [Tooltip("Additional properties for unique cards.")]
     public UniqueCardPropertiesSO uniqueProperties;
+
 }

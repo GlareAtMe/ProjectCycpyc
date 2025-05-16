@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Constans
+﻿namespace Assets.Scripts.Constants
 {
     internal static class SceneConstans
     {

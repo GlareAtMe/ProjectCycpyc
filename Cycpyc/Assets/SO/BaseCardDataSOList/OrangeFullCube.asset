@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3148481915fc6bb489b4c1b4a339bc25, type: 3}
+  m_Name: OrangeFullCube
+  m_EditorClassIdentifier: 
+  cardName: Orange Full Cube
+  cardFigureShape: 1
+  cardFigureColor: 3
+  cardBonus: {fileID: 11400000, guid: 8966c6f5703f7164794dfe323f0f922b, type: 2}
+  cardSprite: {fileID: 11400000, guid: acfb6dff6b09474408d5994dccfea299, type: 2}
+  cardFigureSprite: {fileID: 11400000, guid: 861f344ca6f80bf46adbf00894f0dbbb, type: 2}
+  combinationHelper: {fileID: 11400000, guid: f3a502eeaa0bf2f4789a94184118180b, type: 2}
+  isCardUnique: 0
+  uniqueProperties: {fileID: 0}

@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Constans;
+﻿using Assets.Scripts.Constants;
 using UnityEngine;
 using UnityEngine.UI;
 
