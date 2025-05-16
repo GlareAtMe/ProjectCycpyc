@@ -3,10 +3,45 @@
   "WorkspaceRootPath": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|c:\\users\\ronpo\\projectcycpyc\\cycpyc\\assets\\scripts\\_test_scripts\\testgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\_test_scripts\\testgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|c:\\users\\ronpo\\projectcycpyc\\cycpyc\\assets\\scripts\\scriptableobjects\\cards\\carddataso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\cards\\carddataso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|c:\\users\\ronpo\\projectcycpyc\\cycpyc\\assets\\scripts\\scriptableobjects\\cards\\cardbonusso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\cards\\cardbonusso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\assets\\scripts\\enums\\cardbonusvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enums\\cardbonusvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|c:\\users\\ronpo\\projectcycpyc\\cycpyc\\assets\\scripts\\managers\\deckmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\deckmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\assets\\scripts\\_test_scripts\\testgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\_test_scripts\\testgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\assets\\scripts\\_test_scripts\\testdeckmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\_test_scripts\\testdeckmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\assets\\scripts\\constants\\sceneconstans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\constants\\sceneconstans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\assets\\scripts\\enums\\cardtypevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enums\\cardtypevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{218B3816-44C4-9771-2754-9409BB155F9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,7 +113,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 2,
+=======
+          "SelectedChildIndex": 1,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,6 +125,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 2,
               "Title": "SceneConstans.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Constans\\SceneConstans.cs",
@@ -100,6 +140,73 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+=======
+              "DocumentIndex": 0,
+              "Title": "CardDataSO.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\Cards\\CardDataSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\Cards\\CardDataSO.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\Cards\\CardDataSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\Cards\\CardDataSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:44:09.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CardBonusSO.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\Cards\\CardBonusSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\Cards\\CardBonusSO.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\Cards\\CardBonusSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\Cards\\CardBonusSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:43:08.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardBonusValue.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Enums\\CardBonusValue.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enums\\CardBonusValue.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Enums\\CardBonusValue.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enums\\CardBonusValue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:42:52.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TestDeckManager.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\_TEST_SCRIPTS\\TestDeckManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\_TEST_SCRIPTS\\TestDeckManager.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\_TEST_SCRIPTS\\TestDeckManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\_TEST_SCRIPTS\\TestDeckManager.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:20:41.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeckManager.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\DeckManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\DeckManager.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\DeckManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\DeckManager.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwDYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:45:21.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+>>>>>>> Stashed changes
               "Title": "TestGameManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\_TEST_SCRIPTS\\TestGameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\_TEST_SCRIPTS\\TestGameManager.cs",
@@ -107,12 +214,116 @@
               "RelativeToolTip": "Assets\\Scripts\\_TEST_SCRIPTS\\TestGameManager.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAmwCAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-05-12T17:56:16.632Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+=======
+              "WhenOpened": "2025-05-15T10:44:50.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BetManager.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\BetManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\BetManager.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\BetManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\BetManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T14:11:24.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CombinationHelperSO.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\CombinationHelperSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\CardFields\\CombinationHelperSO.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\CombinationHelperSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\CardFields\\CombinationHelperSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:05:49.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CardDataSO.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardDataSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\CardDataSO.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardDataSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\CardDataSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T12:02:20.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CardSpriteSO.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\CardSpriteSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\CardFields\\CardSpriteSO.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\CardSpriteSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\CardFields\\CardSpriteSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:02:15.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CardFigureSpriteSO.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\CardFigureSpriteSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\CardFields\\CardFigureSpriteSO.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\CardFigureSpriteSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\CardFields\\CardFigureSpriteSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:04:00.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GameManager.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\GameManager.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAIAwwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T11:58:55.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CardTypeValue.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Enums\\CardTypeValue.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enums\\CardTypeValue.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Enums\\CardTypeValue.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enums\\CardTypeValue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:47:16.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UniqueCardPropertiesSO.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\UniqueCardPropertiesSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\CardFields\\UniqueCardPropertiesSO.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\UniqueCardPropertiesSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\CardFields\\UniqueCardPropertiesSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:10:06.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+>>>>>>> Stashed changes
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UIManager.cs",
@@ -124,7 +335,23 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 13,
+=======
+              "DocumentIndex": 6,
+              "Title": "SceneConstans.cs",
+              "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Constants\\SceneConstans.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Constants\\SceneConstans.cs",
+              "ToolTip": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Constants\\SceneConstans.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Constants\\SceneConstans.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T10:45:41.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+>>>>>>> Stashed changes
               "Title": "CardManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\CardManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\CardManager.cs",
@@ -136,6 +363,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 7,
               "Title": "BetManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\BetManager.cs",
@@ -210,6 +438,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+=======
+              "DocumentIndex": 10,
+>>>>>>> Stashed changes
               "Title": "ArenaPhaseManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\ArenaPhaseManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\ArenaPhaseManager.cs",
@@ -222,7 +453,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 4,
+=======
+              "DocumentIndex": 11,
+>>>>>>> Stashed changes
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlayerManager.cs",
@@ -234,7 +469,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 8,
+=======
+              "DocumentIndex": 13,
+>>>>>>> Stashed changes
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\InputManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\InputManager.cs",
@@ -246,7 +485,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 14,
+=======
+              "DocumentIndex": 15,
+>>>>>>> Stashed changes
               "Title": "SceneLoader.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\SceneLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\SceneLoader.cs",
@@ -258,6 +501,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 9,
               "Title": "UniqueCardPropertiesSO.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\ScriptableObjects\\CardFields\\UniqueCardPropertiesSO.cs",
@@ -271,6 +515,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 15,
+=======
+              "DocumentIndex": 16,
+>>>>>>> Stashed changes
               "Title": "PokerPhaseManager.cs",
               "DocumentMoniker": "C:\\Users\\ronpo\\ProjectCycpyc\\Cycpyc\\Assets\\Scripts\\Managers\\PokerPhaseManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PokerPhaseManager.cs",
