@@ -1,8 +1,8 @@
 ﻿public enum CardBonusValue
 {
     Full,
-    TwoThirds,
     Half,
-    Minimum,
+    OneThird,
+    OneFourth,
     Unique
 }
