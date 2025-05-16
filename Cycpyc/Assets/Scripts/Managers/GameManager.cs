@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private PokerPhaseManager pokerPhaseManager;
+
     public static GameManager Instance { get; private set; }
 
     public GameState CurrentState { get; private set; }
@@ -18,6 +20,11 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         SetState(GameState.MainMenu);
+    }
+
+    public void InitiatePokerPhase()
+    {
+        pokerPhaseManager.StartPokerPhase();
     }
 
     public void SetState(GameState newState)
