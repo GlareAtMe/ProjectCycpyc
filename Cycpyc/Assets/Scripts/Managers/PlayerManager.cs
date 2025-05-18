@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
 
     public List<PlayerData> Players { get; private set; } = new List<PlayerData>();
 
+    public List<CardDataSO> CardsInPlayerHand { get; private set; }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,4 +29,20 @@ public class PlayerManager : MonoBehaviour
     {
         Players.Add(new PlayerData(playerName));
     }
+
+    public List<CardDataSO> GetPlayerHandCount(PlayerData player)
+    {
+        return player.SelectedCards;
+    }
+
+    public CardDataSO GetPlayerCards(PlayerData player, int index)
+    {
+        if (index < 0 || index >= player.SelectedCards.Count)
+        {
+            Debug.LogWarning("Card index out of range.");
+            return null;
+        }
+        return player.SelectedCards[index];
+    }
+
 }

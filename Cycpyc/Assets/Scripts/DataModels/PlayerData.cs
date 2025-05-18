@@ -9,7 +9,9 @@ public class PlayerData
     public string PlayerName;
 
     public List<CardDataSO> SelectedCards = new List<CardDataSO>();
-
+    public List<BetPunishments> PlayerAvailableBets = new List<BetPunishments>();
+    public List<BetPunishments> PlayerBet = new List<BetPunishments>();
+    
     public PlayerState State = PlayerState.Waiting;
 
     // Placeholder for future expansions
@@ -20,6 +22,26 @@ public class PlayerData
     {
         PlayerId = playerName;
         PlayerName = playerName;
+
+        //TODO REMAKE WITH SO (BetSetSO)
+        PlayerAvailableBets = new List<BetPunishments> { 
+            BetPunishments.DeadlyPunishment,  
+            BetPunishments.HardPunishment,
+            BetPunishments.HardPunishment,
+            BetPunishments.MidllePunishment,
+            BetPunishments.MidllePunishment,
+            BetPunishments.MidllePunishment,
+            BetPunishments.MidllePunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment
+        };
     }
 
     public PlayerData(Guid playerId, string playerName)
