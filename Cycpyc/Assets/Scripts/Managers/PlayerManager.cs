@@ -6,7 +6,10 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance { get; private set; }
 
-    public List<PlayerData> Players { get; private set; } = new List<PlayerData>();
+    private List<PlayerData> _players = new();
+    private readonly Dictionary<string, PlayerData> _playersById = new();
+
+    public IReadOnlyList<PlayerData> Players => _players;
 
     public List<CardDataSO> CardsInPlayerHand { get; private set; }
 
@@ -19,30 +22,39 @@ public class PlayerManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        // TODO: Remove hardcoded players when implementing real player registration
-        Players.Add(new PlayerData("Player 1"));
-        Players.Add(new PlayerData("Player 2"));
     }
 
-    public void AddPlayer(string playerName)
+    public bool RegisterPlayer(PlayerData p)
     {
-        Players.Add(new PlayerData(playerName));
-    }
-
-    public List<CardDataSO> GetPlayerHandCount(PlayerData player)
-    {
-        return player.SelectedCards;
-    }
-
-    public CardDataSO GetPlayerCards(PlayerData player, int index)
-    {
-        if (index < 0 || index >= player.SelectedCards.Count)
+        if (p == null || string.IsNullOrEmpty(p.PlayerId)) return false;
+        if (_playersById.ContainsKey(p.PlayerId))
         {
-            Debug.LogWarning("Card index out of range.");
-            return null;
+            Debug.LogWarning($"[PlayerManager] Duplicate PlayerId: {p.PlayerId}");
+            return false;
         }
-        return player.SelectedCards[index];
+        _players.Add(p);
+        _playersById[p.PlayerId] = p;
+        return true;
     }
 
+    public bool UnregisterPlayer(string playerId)
+    {
+        if (!_playersById.TryGetValue(playerId, out var p)) return false;
+        _playersById.Remove(playerId);
+        _players.Remove(p);
+        return true;
+    }
+
+    public void RebuildIndex()
+    {
+        _playersById.Clear();
+        foreach (var p in _players)
+            _playersById[p.PlayerId] = p;
+    }
+
+    public PlayerData GetPlayerById(string playerId)
+    {
+        _playersById.TryGetValue(playerId, out var p);
+        return p;
+    }
 }
