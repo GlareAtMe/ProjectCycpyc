@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using Assets.Scripts.DataModels.BetData; // DTO: PerPlayerResolution, RoundComputationResult, BetSnapshot, RoundResult, BetResolutionEntry
+using Assets.Scripts.DataModels.BetData; 
 using Assets.Scripts.Enums;
 
 public class BetManager : MonoBehaviour
@@ -43,11 +43,15 @@ public class BetManager : MonoBehaviour
     #region Public API — Betting Window
 
     /// <summary>Відкриває вікно ставок, скидає ставки, запускає таймер.</summary>
-    public void StartBetting(float? durationSeconds = null)
+    public void StartBetting(float? durationSeconds = null, bool resetPlayerBets = false)
     {
         if (Phase == BetRoundPhase.BettingOpen) return;
 
-        ResetBets(); // очищає тільки PlayerBet (не чіпає ActivePunishments)
+        if (resetPlayerBets)
+        {
+            ResetBets(); // чистимо лише на початку раунду
+        }
+
         Phase = BetRoundPhase.BettingOpen;
 
         var duration = Mathf.Max(0.1f, durationSeconds ?? defaultBetDurationSeconds);

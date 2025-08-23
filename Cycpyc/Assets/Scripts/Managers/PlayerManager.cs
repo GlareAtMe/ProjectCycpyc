@@ -6,12 +6,10 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance { get; private set; }
 
-    private List<PlayerData> _players = new();
-    private readonly Dictionary<string, PlayerData> _playersById = new();
+    private readonly List<PlayerData> players = new();
+    private readonly Dictionary<string, PlayerData> playersById = new();
 
-    public IReadOnlyList<PlayerData> Players => _players;
-
-    public List<CardDataSO> CardsInPlayerHand { get; private set; }
+    public IReadOnlyList<PlayerData> Players => players;
 
     private void Awake()
     {
@@ -24,37 +22,71 @@ public class PlayerManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public bool RegisterPlayer(PlayerData p)
+    // ---- Core API ----
+
+    public bool RegisterPlayer(PlayerData player)
     {
-        if (p == null || string.IsNullOrEmpty(p.PlayerId)) return false;
-        if (_playersById.ContainsKey(p.PlayerId))
+        if (player == null || string.IsNullOrEmpty(player.PlayerId)) return false;
+        if (playersById.ContainsKey(player.PlayerId))
         {
-            Debug.LogWarning($"[PlayerManager] Duplicate PlayerId: {p.PlayerId}");
+            Debug.LogWarning($"[PlayerManager] Duplicate PlayerId: {player.PlayerId}");
             return false;
         }
-        _players.Add(p);
-        _playersById[p.PlayerId] = p;
+        players.Add(player);
+        playersById[player.PlayerId] = player;
         return true;
     }
 
     public bool UnregisterPlayer(string playerId)
     {
-        if (!_playersById.TryGetValue(playerId, out var p)) return false;
-        _playersById.Remove(playerId);
-        _players.Remove(p);
+        if (!playersById.TryGetValue(playerId, out var player)) return false;
+        playersById.Remove(playerId);
+        players.Remove(player);
         return true;
     }
 
     public void RebuildIndex()
     {
-        _playersById.Clear();
-        foreach (var p in _players)
-            _playersById[p.PlayerId] = p;
+        playersById.Clear();
+        foreach (var player in players)
+            playersById[player.PlayerId] = player;
     }
 
     public PlayerData GetPlayerById(string playerId)
     {
-        _playersById.TryGetValue(playerId, out var p);
-        return p;
+        playersById.TryGetValue(playerId, out var player);
+        return player;
+    }
+
+    // ---- Test & utility helpers (for quick pokerscene runs) ----
+
+    /// <summary>Create and register a player with a fresh Guid ID.</summary>
+    public PlayerData CreateAndRegisterPlayer(string displayName)
+    {
+        var player = new PlayerData(Guid.NewGuid(), displayName);
+        if (!RegisterPlayer(player))
+        {
+            Debug.LogError($"[PlayerManager] Failed to register player {displayName}");
+            return null;
+        }
+        return player;
+    }
+
+    /// <summary>Remove all players and rebuild indices.</summary>
+    public void ClearAllPlayers()
+    {
+        players.Clear();
+        playersById.Clear();
+    }
+
+    /// <summary>Ensure at least N players exist (quick boot for tests).</summary>
+    public void EnsureTestPlayers(int count)
+    {
+        if (count < 1) count = 1;
+        while (players.Count < count)
+        {
+            var idx = players.Count + 1;
+            CreateAndRegisterPlayer($"Player_{idx}");
+        }
     }
 }
