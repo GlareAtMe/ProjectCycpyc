@@ -10,13 +10,13 @@ public class TestDeckManager : MonoBehaviour
 
     public void LoadDefaultDeck()
     {
-        Debug.Log("Loading Default Deck...");
+        //Debug.Log("Loading Default Deck...");
         deckManager.LoadDeck(defaultDeck);
     }
 
     public void LoadSpecialDeck()
     {
-        Debug.Log("Loading Special Deck...");
+        //Debug.Log("Loading Special Deck...");
         deckManager.LoadDeck(specialDeck);
     }
 
@@ -39,7 +39,7 @@ public class TestDeckManager : MonoBehaviour
 
     public void PrintDeck()
     {
-        Debug.Log("Listing cards in current deck:");
+        //Debug.Log("Listing cards in current deck:");
         foreach (var card in deckManager.GetDeck())
         {
             Debug.Log("- " + card.cardName);

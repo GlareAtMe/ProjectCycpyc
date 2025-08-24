@@ -23,6 +23,7 @@ public class BetManager : MonoBehaviour
 
     [Header("Config")]
     [SerializeField] private float defaultBetDurationSeconds = 20f; // TODO: винести у ScriptableObject PokerConfig
+    [SerializeField] private bool autoConfirmOnTimeout = true;
 
     public BetRoundPhase Phase { get; private set; } = BetRoundPhase.None;
     public int CurrentRoundIndex { get; private set; } = 0;
@@ -49,7 +50,8 @@ public class BetManager : MonoBehaviour
 
         if (resetPlayerBets)
         {
-            ResetBets(); // чистимо лише на початку раунду
+            ResetBets();
+            Debug.Log("[BetManager] Player bets reset at round start.");
         }
 
         Phase = BetRoundPhase.BettingOpen;
@@ -61,6 +63,7 @@ public class BetManager : MonoBehaviour
         Debug.Log($"[BetManager] Round {CurrentRoundIndex} — betting started ({duration:F1}s).");
         OnBettingStarted?.Invoke();
     }
+
 
     /// <summary>Ставка гравця. Повертає true якщо успіх.</summary>
     public bool PlaceBet(PlayerData player, BetPunishments bet)
@@ -297,6 +300,8 @@ public class BetManager : MonoBehaviour
     private System.Collections.IEnumerator CoBetTimer(float duration)
     {
         TimeLeft = duration;
+        Debug.Log($"[BetTimer] START dur={duration:F2}, timeScale={Time.timeScale}, phase={Phase}");
+
         while (TimeLeft > 0f && Phase == BetRoundPhase.BettingOpen)
         {
             yield return null;
@@ -304,11 +309,16 @@ public class BetManager : MonoBehaviour
             OnBettingTick?.Invoke(Mathf.Max(0f, TimeLeft));
         }
 
-        // Якщо все ще відкрита фаза — час вийшов
+        var reason = (TimeLeft <= 0f) ? "elapsed" : "phaseChanged";
+        Debug.Log($"[BetTimer] EXIT reason={reason}, tl={TimeLeft:F3}, phase={Phase}");
+
+        // Якщо вікно ще відкрите — або час вийшов, або фазу не змінювали ззовні
         if (Phase == BetRoundPhase.BettingOpen)
         {
             OnBettingTimeUp?.Invoke();
-            ConfirmBets(); // авто-фіксація
+            if (autoConfirmOnTimeout)
+                ConfirmBets(); // авто-фіксуємо ставки по таймауту
+                               // якщо авто-конфірм не потрібен — просто залиш вікно відкритим і чекай ручного ConfirmBets()
         }
 
         betTimerCoroutine = null;

@@ -4,14 +4,16 @@ using System.Collections.Generic;
 public class DeckManager : MonoBehaviour
 {
     [SerializeField] private DeckDataSO defaultDeckData;
+    [SerializeField] private bool autoLoadDefaultOnAwake = false;
 
     private List<CardDataSO> deck;
     private int topIndex = 0; // pointer to the current top card
 
+
     private void Awake()
     {
-        if (defaultDeckData != null) LoadDeck();
-        else Debug.LogWarning("DeckManager: defaultDeckData is not assigned.");
+        if (autoLoadDefaultOnAwake && defaultDeckData != null)
+            LoadDeck();
     }
 
     public void LoadDeck()
@@ -61,7 +63,9 @@ public class DeckManager : MonoBehaviour
 
         CardDataSO drawnCard = deck[topIndex];
         topIndex++;
-        Debug.Log($"Drew card: {drawnCard.name}");
+        Debug.Log($"Drew card: {drawnCard.cardName} ({drawnCard.cardFigureShape}, {drawnCard.cardFigureColor})");
+        Debug.Log($"[Deck] topIndex={topIndex}, count={deck.Count}");
+        Debug.Log($"Drew card: {drawnCard.cardName} ... | Remaining: {RemainingCards}");
         return drawnCard;
     }
 

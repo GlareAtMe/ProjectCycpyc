@@ -36,7 +36,7 @@ public class PlayerData
     // Якщо ми поки що ідентифікуємо гравця іменем
     public PlayerData(string playerName)
     {
-        PlayerId = playerName;         // тимчасово: id = name
+        PlayerId = playerName;         
         PlayerName = playerName;
     }
 
@@ -45,15 +45,34 @@ public class PlayerData
     {
         PlayerId = playerId.ToString();
         PlayerName = playerName;
+        InitDefaultAvailableBets();
     }
+
+    private void InitDefaultAvailableBets()
+    {
+        // TODO: винести в SO (BetSetSO), поки — як було у тебе
+        PlayerAvailableBets = new List<BetPunishments> {
+            BetPunishments.DeadlyPunishment,
+            BetPunishments.HardPunishment, BetPunishments.HardPunishment,
+            BetPunishments.MidllePunishment, BetPunishments.MidllePunishment,
+            BetPunishments.MidllePunishment, BetPunishments.MidllePunishment,
+            BetPunishments.EasyPunishment, BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment, BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment, BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment, BetPunishments.EasyPunishment,
+            BetPunishments.EasyPunishment
+        };
+    }
+
+    public void ResetAvailableBetsToDefault() => InitDefaultAvailableBets();
 
     // Фабрика з BetSetSO 
     public static PlayerData Create(string playerName, BetSetSO betSet)
     {
-        var p = new PlayerData(playerName);
+        var playerData = new PlayerData(playerName);
         if (betSet != null)
-            p.PlayerAvailableBets = betSet.GetInitialBets(); // копія з SO
-        return p;
+            playerData.PlayerAvailableBets = betSet.GetInitialBets(); // копія з SO
+        return playerData;
     }
 
     #endregion
@@ -74,7 +93,7 @@ public class PlayerData
         Touch();
     }
 
-    // Очищує транзієнтні дані раунду (викликає BetManager при підготовці до нового раунду)
+    // Очищує транзитні дані раунду (викликає BetManager при підготовці до нового раунду)
     public void ResetTransientForNewRound()
     {
         PlayerBet.Clear();
