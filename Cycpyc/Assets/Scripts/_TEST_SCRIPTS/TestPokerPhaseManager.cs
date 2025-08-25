@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Assets.Scripts.DataModels.BetData;
 using Assets.Scripts.Enums;
 using UnityEngine;
@@ -16,7 +15,7 @@ public class TestPokerPhaseController : MonoBehaviour
         if (BetManager.Instance != null)
         {
             BetManager.Instance.OnBettingStarted += HandleBettingStarted;
-            //BetManager.Instance.OnBettingTick += HandleBettingTick;
+            BetManager.Instance.OnBettingTick += HandleBettingTick;
             BetManager.Instance.OnBettingTimeUp += HandleBettingTimeUp;
             BetManager.Instance.OnBetsConfirmed += HandleBetsConfirmed;
             BetManager.Instance.OnBetsResolved += HandleBetsResolved;
@@ -30,7 +29,7 @@ public class TestPokerPhaseController : MonoBehaviour
         if (BetManager.Instance != null)
         {
             BetManager.Instance.OnBettingStarted -= HandleBettingStarted;
-            //BetManager.Instance.OnBettingTick -= HandleBettingTick;
+            BetManager.Instance.OnBettingTick -= HandleBettingTick;
             BetManager.Instance.OnBettingTimeUp -= HandleBettingTimeUp;
             BetManager.Instance.OnBetsConfirmed -= HandleBetsConfirmed;
             BetManager.Instance.OnBetsResolved -= HandleBetsResolved;
@@ -91,6 +90,23 @@ public class TestPokerPhaseController : MonoBehaviour
 
     // ---------- Bets: place / cancel ----------
 
+    public void PlaceSpecificBetForAll(BetPunishments type)
+    {
+        if (BetManager.Instance.Phase != BetRoundPhase.BettingOpen)
+        {
+            Debug.Log("[Test] Skipped: betting not open.");
+            return;
+        }
+
+        foreach (var p in PlayerManager.Instance.Players)
+        {
+            if (BetManager.Instance.TryPlaceSpecificBet(p, type))
+                Debug.Log($"[Test] {p.PlayerName} placed {type}");
+            else
+                Debug.Log($"[Test] {p.PlayerName} cannot place {type} (not available).");
+        }
+    }
+
     public void PlaceRandomBetsOncePerPlayer()
     {
         if (BetManager.Instance.Phase != BetRoundPhase.BettingOpen)
@@ -107,7 +123,7 @@ public class TestPokerPhaseController : MonoBehaviour
                 Debug.Log($"[Test] {p.PlayerName}: no available bets.");
                 continue;
             }
-            var bet = avail[Random.Range(0, avail.Count)];
+            var bet = avail[UnityEngine.Random.Range(0, avail.Count)];
             BetManager.Instance.PlaceBet(p, bet);
         }
     }
@@ -132,9 +148,21 @@ public class TestPokerPhaseController : MonoBehaviour
         foreach (var p in PlayerManager.Instance.Players)
         {
             if (p.PlayerBet.Count == 0) continue;
-            var bet = p.PlayerBet[Random.Range(0, p.PlayerBet.Count)];
+            var bet = p.PlayerBet[UnityEngine.Random.Range(0, p.PlayerBet.Count)];
             BetManager.Instance.CancelBet(p, bet);
         }
+    }
+
+    public void PlaceEasyForAll() => PlaceSpecificBetForAll(BetPunishments.EasyPunishment);
+    public void PlaceMiddleForAll() => PlaceSpecificBetForAll(BetPunishments.MidllePunishment);
+    public void PlaceHardForAll() => PlaceSpecificBetForAll(BetPunishments.HardPunishment);
+    public void PlaceDeadlyForAll() => PlaceSpecificBetForAll(BetPunishments.DeadlyPunishment);
+
+
+    //TODO
+    public void PlaceSpecificBetForPlayer(int index, BetPunishments type)
+    {
+
     }
 
     public void ResetAllBets()
@@ -160,7 +188,7 @@ public class TestPokerPhaseController : MonoBehaviour
     // ---------- Event handlers (logs) ----------
 
     private void HandleBettingStarted() => Debug.Log("[Evt] BettingStarted");
-    //private void HandleBettingTick(float tl) => Debug.Log($"[Evt] BettingTick {tl:F1}s");
+    private void HandleBettingTick(float tl) => Debug.Log($"[Evt] BettingTick {tl:F1}s");
     private void HandleBettingTimeUp() => Debug.Log("[Evt] BettingTimeUp");
     private void HandleBetsConfirmed() => Debug.Log("[Evt] BetsConfirmed");
     private void HandleBetsResolved(RoundResult r) => Debug.Log($"[Evt] BetsResolved round={r.RoundIndex} entries={r.Entries.Count}");

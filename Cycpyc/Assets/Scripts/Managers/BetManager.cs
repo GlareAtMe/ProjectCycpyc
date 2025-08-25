@@ -46,6 +46,8 @@ public class BetManager : MonoBehaviour
     /// <summary>Відкриває вікно ставок, скидає ставки, запускає таймер.</summary>
     public void StartBetting(float? durationSeconds = null, bool resetPlayerBets = false)
     {
+
+
         if (Phase == BetRoundPhase.BettingOpen) return;
 
         if (resetPlayerBets)
@@ -83,6 +85,15 @@ public class BetManager : MonoBehaviour
         Debug.Log($"[BetManager] {player.PlayerName} placed {bet}");
         OnBetPlaced?.Invoke(player, bet);
         return true;
+    }
+
+    public bool TryPlaceSpecificBet(PlayerData player, BetPunishments type)
+    {
+        if (!CanMutateBets() || player == null) return false;
+        if (!player.HasAvailable(type)) return false;
+
+        // keep PlaceBet as the single mutation point
+        return PlaceBet(player, type);
     }
 
     /// <summary>Скасування ставки гравця поки вікно відкрите.</summary>

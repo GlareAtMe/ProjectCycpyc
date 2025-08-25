@@ -93,6 +93,12 @@ public class PokerPhaseManager : MonoBehaviour
 
         // Перше вікно ставок — чистий початок (скидання ставок робить сам BetManager при reset=true)
         StartBettingWindow(resetPlayerBets: true);
+
+        if (betManager == null)
+            betManager = FindFirstObjectByType<BetManager>(FindObjectsInactive.Include);
+
+        if (betManager == null)
+            Debug.LogError("[PPM] BetManager reference is missing!");
     }
 
     public void ContinuePokerPhase()
@@ -147,6 +153,8 @@ public class PokerPhaseManager : MonoBehaviour
 
     private void StartBettingWindow(bool resetPlayerBets)
     {
+        Debug.Log($"[PPM] StartBettingWindow(reset={resetPlayerBets}) bm={(betManager ? betManager.Phase.ToString() : "NULL")}");
+
         if (betManager == null) return;
 
         // якщо попереднє вікно ще відкрите — зафіксуємо перед новим

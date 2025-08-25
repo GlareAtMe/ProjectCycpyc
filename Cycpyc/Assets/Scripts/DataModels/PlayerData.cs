@@ -124,6 +124,16 @@ public class PlayerData
 
     private void Touch() => LastStateChangeUtc = DateTime.UtcNow;
 
+    public bool HasAvailable(BetPunishments type) =>
+    PlayerAvailableBets.Contains(type);
+
+    public bool RemoveOneAvailable(BetPunishments type)
+    {
+        int idx = PlayerAvailableBets.IndexOf(type);
+        if (idx < 0) return false;
+        PlayerAvailableBets.RemoveAt(idx);
+        return true;
+    }
     #endregion
 }
 
