@@ -18,8 +18,10 @@ public class PlayerData
     // Карти (покер-фаза)
     public List<CardDataSO> SelectedCards { get; private set; } = new List<CardDataSO>();
 
-    // Ставки: доступні у цьому матчі та вибрані на поточний раунд
+          
     public List<BetPunishments> PlayerAvailableBets { get; private set; } = new List<BetPunishments>();
+    // “валюта” з програвших
+    public List<BetPunishments> CollectedPunishments = new();   // “валюта” з програвших
     public List<BetPunishments> PlayerBet { get; private set; } = new List<BetPunishments>();
 
     // Застосовані покарання, що переносяться між раундами
@@ -78,6 +80,17 @@ public class PlayerData
     #endregion
 
     #region API керування станом
+    public void ApplyPunishments(IEnumerable<BetPunishments> list)
+    {
+        foreach (var p in list)
+            if (!ActivePunishments.Contains(p)) ActivePunishments.Add(p);
+    }
+
+    public void CollectPunishments(IEnumerable<BetPunishments> list)
+    {
+        CollectedPunishments.AddRange(list);
+        // за потреби: мерджити/стекати кількості
+    }
 
     public void SetReady(bool ready)
     {
